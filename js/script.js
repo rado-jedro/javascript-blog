@@ -56,8 +56,12 @@
     const titleList = document.querySelector(optTitleListSelector);
     console.log(titleList);
     titleList.innerHTML = '';
+    
   /* for each article */
-
+    const articles = document.querySelectorAll('.post');
+    for (let article of articles){
+      article.
+    }
     /* get the article id */
 
     /* find the title element */
