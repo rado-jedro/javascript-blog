@@ -59,9 +59,12 @@
     
   /* for each article */
     const articles = document.querySelectorAll('.post');
+    /*
     for (let article of articles){
-      article.
+      article.classList.add('active'); //???
     }
+    console.log(article);
+    */
     /* get the article id */
 
     /* find the title element */
@@ -73,18 +76,14 @@
     /* insert link into titleList */
 
 }
-
-generateTitleLinks();
+console.log(optTitleListSelector)
+generateTitleLinks(optTitleListSelector);
 
 
   //test
+  /*
   document.getElementById('test-button').addEventListener('click', function(){
     const post = document.querySelectorAll('.post');
     console.log('posts:', post);
-  
-  
-  
-  
-  
-  
   });
+  */
