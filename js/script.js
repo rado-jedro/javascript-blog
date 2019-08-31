@@ -99,22 +99,27 @@ function generateTags(){
   /* find tags wrapper */
     let tagWrapper = article.querySelector(optArticleTagsSelector);
     console.log(tagWrapper);
-    /* make html variable with empty string */// let html = '';
+    /* make html variable with empty string */
+    let html = '';
     /* get tags from data-tags attribute */
-    let tags = article.getAttribute('data-tags');
-    console.log(tags);
+    let articleTags = article.getAttribute('data-tags');
+    console.log(articleTags);
     /* split tags into array */
-
+    const articleTagsArray = articleTags.split(' ');
+    console.log(articleTagsArray);
     /* START LOOP: for each tag */
-
+    for(let tag of articleTagsArray) {
+    console.log(tag);
     /* generate HTML of the link */
-
+    const linkHTML = '<li><a href="#tag-'+ tag +'">'  + tag +'</a></li>'
+    console.log(linkHTML);
     /* add generated code to html variable */
-
+    html = html + linkHTML;
+    console.log(html);
     /* END LOOP: for each tag */
-
+    }
     /* insert HTML of all the links into the tags wrapper */
-
+    tagWrapper.innerHTML = html;
   /* END LOOP: for every article: */
   }
 }
