@@ -82,11 +82,11 @@
 console.log(optTitleListSelector)
 generateTitleLinks(optTitleListSelector);
 
-const links = document.querySelectorAll('.titles a');
+  const links = document.querySelectorAll('.titles a');
   
-for(let link of links){
-  link.addEventListener('click', titleClickHandler);
-}
+  for(let link of links){
+    link.addEventListener('click', titleClickHandler);
+  }
 
 
   //test
