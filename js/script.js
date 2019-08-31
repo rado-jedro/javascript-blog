@@ -40,11 +40,7 @@
     console.log(targetArticle);
   }
   
-  const links = document.querySelectorAll('.titles a');
-  
-  for(let link of links){
-    link.addEventListener('click', titleClickHandler);
-  }
+
 
   const optArticleSelector = '.post',
   optTitleSelector = '.post-title',
@@ -62,6 +58,7 @@
     const articles = document.querySelectorAll('.post');
     
     let html = '';
+
     for (let article of articles){
     
     /* get the article id */
@@ -74,17 +71,22 @@
       const articleTitle = article.querySelector(optTitleSelector).innerHTML;
       console.log(articleTitle);
     /* create HTML of the link */
-
       const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
       console.log(linkHTML);
     /* insert link into titleList */
       html = html + linkHTML;
+      console.log(html);
     }
   titleList.innerHTML = html;  
 }
 console.log(optTitleListSelector)
 generateTitleLinks(optTitleListSelector);
 
+const links = document.querySelectorAll('.titles a');
+  
+for(let link of links){
+  link.addEventListener('click', titleClickHandler);
+}
 
 
   //test
