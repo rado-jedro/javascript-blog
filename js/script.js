@@ -193,7 +193,8 @@ function generateAuthors(){
 }
 /* insert HTML of all the links into the tags wrapper */
 authorList.innerHTML = html;
-generateTags();
+}
+generateAuthors();
 
 
 function authorClickHandler(event) {
