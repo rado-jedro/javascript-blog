@@ -49,7 +49,7 @@ const optArticleSelector = '.post',
   optArticleAuthorSelector = '.list .authors';
 
 
-function generateTitleLinks(customSelector = ''){
+function generateTitleLinks(){
 
   /* remove contents of titleList */
   const titleList = document.querySelector(optTitleListSelector);
@@ -57,7 +57,7 @@ function generateTitleLinks(customSelector = ''){
   titleList.innerHTML = '';
 
   /* for each article */
-  const articles = document.querySelectorAll(optArticleSelector + customSelector);
+  const articles = document.querySelectorAll(optArticleSelector);
   //const articles = document.querySelectorAll(optArticleSelector);
 
   console.log(articles);
